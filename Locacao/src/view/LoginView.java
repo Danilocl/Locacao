@@ -2,6 +2,8 @@ package view;
 
 import javax.faces.bean.ManagedBean;
 
+import control.ControlLogin;
+
 @ManagedBean
 public class LoginView {
 
@@ -22,6 +24,12 @@ public class LoginView {
 
 	public void setSenha(String senha) {
 		this.senha = senha;
+	}
+	public void cadastrarExpositor() {
+		ControlLogin controllerLogin = new ControlLogin();
+		controllerLogin.cadastrarExpositor();		
+		System.out.println(this.nome);
+		this.senha = this.nome;
 	}
 
 }

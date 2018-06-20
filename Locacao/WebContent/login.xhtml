@@ -10,16 +10,15 @@
 <h:head>
 	<h:outputStylesheet library="css" name="bootstrap.min.css"></h:outputStylesheet>
 </h:head>
-<h:body onload="PF('dlg').show()">
+<h:body>
 	<h:form>
 	
 		<h:panelGrid columns="2" cellpadding="5">
-			<p:outputLabel for="date" value="Nome: " />
-			<p:inputMask id="date" value="#{maskView.date}" mask=""/>
+			<p:outputLabel for="nome" value="Nome: " />
+			<p:inputMask id="nome" value="#{loginView.nome}" mask=""/>
 
-			<p:outputLabel for="phone" value="Phone:" />
-			<p:inputMask id="phone" value="#{maskView.phone}"
-				mask="(99) 99999-9999" />
+			<p:outputLabel for="senha" value="Phone:" />
+			<p:inputMask id="senha" value="#{loginView.senha}"/>
 
 			<p:outputLabel for="phoneWithExt" value="Phone with Ext:" />
 			<p:inputMask id="phoneWithExt" value="#{maskView.phoneExt}"
@@ -36,7 +35,7 @@
 				mask="a*-999-a999" />
 			
 			<p:commandButton value="Cadastrar" type="cadastrar"
-				styleClass="btn btn-primary" />
+				styleClass="btn btn-primary" actionListener="#{loginView.cadastrarExpositor}" update="senha" />
 			<p:commandButton value="Cancelar" type="cancelar" styleClass="btn btn-danger"/>
 				
 		</h:panelGrid>

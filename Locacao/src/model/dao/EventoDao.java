@@ -39,7 +39,21 @@ public class EventoDao extends BaseDAO {
 		return list;
 
 	}
-
+	public void insertEvento(Evento evento) throws SQLException {
+		Connection con = getConnection();
+		try {
+			PreparedStatement ps = con.prepareStatement("INSERT into evento (idevento,nomeevento, endevento) values (?, ?,?)");			
+			ps.setInt(1, evento.getId());
+			ps.setString(2, evento.getNome());
+			ps.setString(3, evento.getLocal());
+			ps.executeUpdate();
+			ps.close();
+			con.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
 	public Evento createEvento(ResultSet rs) throws SQLException {
 
 		Evento e = new Evento();

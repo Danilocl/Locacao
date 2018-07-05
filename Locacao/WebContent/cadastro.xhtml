@@ -14,14 +14,21 @@
 	<h:form>
 	
 		<h:panelGrid columns="2" cellpadding="5">
-			<p:outputLabel for="nome" value="Nome: " />
-			<p:inputMask id="nome" value="#{loginView.nome}" mask=""/>
 
-			<p:outputLabel for="senha" value="Phone:" />
-			<p:inputMask id="senha" value="#{loginView.senha}"/>
-
+			<p:outputLabel for="Nome" value="Nome:" />
+			<p:inputMask id="Nome" value="#{cadastroEvento.nome}"/>
+			
+			<p:outputLabel for="Local" value="Local:" />
+			<p:inputMask id="Local" value="#{cadastroEvento.local}"/>
+			
+			<p:outputLabel for="Data" value="Data:" />
+			<p:inputMask id="Data" value="#{cadastroEvento.data}"/>
+			
+			<p:outputLabel for="Horario" value="horario:" />
+			<p:inputMask id="Horario" value="#{cadastroEvento.horario}"/>		
+			
 			<p:commandButton value="Cadastrar" type="cadastrar"
-				styleClass="btn btn-primary" actionListener="#{loginView.cadastrarExpositor}" update="senha" />
+				styleClass="btn btn-primary" actionListener="#{cadastroEvento.cadastrarEvento}" />
 			<p:commandButton value="Cancelar" type="cancelar" styleClass="btn btn-danger"/>
 				
 		</h:panelGrid>

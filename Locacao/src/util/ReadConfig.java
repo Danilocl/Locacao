@@ -15,9 +15,9 @@ public class ReadConfig {
 	}
 
 	private void getParam() {
-		this.jdbc_username = "locacao";
-		this.jdbc_password = "senacsenha";
-		this.jdbc_url = "jdbc:mysql://localhost:3306/senac";
+		this.jdbc_username = "senac";
+		this.jdbc_password = "senac_*_";
+		this.jdbc_url = "jdbc:mysql://localhost:3306/dblocacao";
 	}
 
 	public String getJdbc_username() {

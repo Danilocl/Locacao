@@ -1,7 +1,10 @@
 package view;
 
+import java.sql.SQLException;
+
 import javax.faces.bean.ManagedBean;
 
+import control.ControlEvento;
 import control.ControlLogin;
 
 @ManagedBean
@@ -31,5 +34,6 @@ public class LoginView {
 		System.out.println(this.nome);
 		this.senha = this.nome;
 	}
+	
 
 }
